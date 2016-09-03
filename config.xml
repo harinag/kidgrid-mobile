@@ -27,8 +27,8 @@
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
   <icon src="icon.png"/>
   <platform name="android">
-	<icon src="www/res/icon/android/icon-lamp-192.png" />
-	<splash src="www/res/screen/android/screen-lamp-1920.png" />
+	<icon src="res/icon/android/icon-lamp-192.png" />
+	<splash src="res/screen/android/screen-lamp-1920.png" />
 	<!--
 	<icon src="www/res/icon/android/drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="www/res/icon/android/drawable-mdpi-icon.png" density="mdpi"/>
