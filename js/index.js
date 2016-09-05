@@ -33,7 +33,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        $("#loading").css("display", "none");
-        $("#page1").css("display", "block");
+        $("#loading").addClass("hidden");
+        $("#app").removeClass("hidden");
     }
 };

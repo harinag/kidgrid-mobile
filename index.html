@@ -26,31 +26,90 @@
 
 <body>
 
-    <div  id="loading" role="page">
+    <div  id="loading">
         Loading...
     </div>
 
+    <div id="app" class="hidden">
 
-    <div id="page1" data-role="page">
-        <div data-role="header">
-            <h1>KidGrid</h1>
-        </div>
-        <div data-role="main">
-            <img src="img/logo-lmp-01.png">
-            <button>Онлайн режим</button>
-            <button>Оффлайн режим</button>
-        </div>
 
-        <div data-role="footer">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Tne</a></li>
-                </ul>
+        <!--            -->
+        <!-- INDEX page -->
+        <!--            -->
+
+        <div id="page1index" data-role="page">
+            <div data-role="header" class="ui-grid-b pageheader">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b"><p>Проект KidGrid</p></div>
+                <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
+            </div>
+            <div data-role="main" style="text-align: center;">
+                <div class="ui-grid-a ui-responsive">
+                    <div class="ui-block-a"><img src="img/logo-lmp-01.png"></div>
+                    <div class="ui-grid-solo ui-block-b">
+                        <div class="ui-block-a"><a href="#" class="ui-btn">Онлайн режим</a></div>
+                        <div class="ui-block-a"><a href="#" class="ui-btn">Оффлайн режим</a></div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page2login" data-icon="user">Вход</a></li>
+                        <li><a href="#page3register" data-icon="plus">Регистрация</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+        <!-- / INDEX page -->
     
+        <!--               -->
+        <!-- LOGIN page -->
+        <!--               -->
+
+        <div id="page2login" data-role="page">
+            <div data-role="header" class="ui-grid-b pageheader">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b"><p>Аутентификация</p></div>
+                <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
+            </div>
+            <div data-role="main">
+                
+            </div>
+            
+        </div>
+
+        <!--               -->
+        <!-- REGISTER page -->
+        <!--               -->
+
+        <div id="page3register" data-role="page">
+            <div data-role="header" class="ui-grid-b pageheader">
+                <div class="ui-block-a">
+                    <a href="#page1index" class="ui-btn ui-icon-back ui-btn-icon-left">Назад</a>
+                </div>
+                <div class="ui-block-b"><p>Регистрация</p></div>
+                <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
+            </div>
+            <div data-role="main">
+                <h3 class="ui-bar ui-bar-a">Зачем нужна регистрация?</h3>
+                <div class="ui-body">
+                    <p>Для того, чтобы принять участие в проекте KidGrid, необходимо зарегистрироваться в нашей системе.</p>
+                    <p>Каждому пользователю мы отводим специальное место в системе, сохраняем индивидуальный набор данных. Все вместе это называется "личный кабинет"</p>
+                    <p>На основании собранных данных наш проводник, Энергуша, помогает пользователю оптимизировать потребление энергии.</p>
+                </div>
+                <h3 class="ui-bar ui-bar-a">Как зарегистрироваться?</h3>
+                <div class="ui-body">
+                    <p>Регистрация производится на сайте kidgrid.ru, в соответствующем разделе.</p>
+                    <p>Для регистрации понадобится ввести свой адрес электронной почты и задать пароль, о чем подскажет система в процессе.</p>
+                </div>
+            </div>
+            
+        </div>
+
+
+     </div>
+
     <!-- Scripts block -->    
     <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
