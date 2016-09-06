@@ -38,7 +38,7 @@
         <!--            -->
 
         <div id="page1index" data-role="page">
-            <div data-role="header" class="ui-grid-b pageheader">
+            <div data-role="header" data-position="fixed" class="ui-grid-b pageheader">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b"><p>Проект KidGrid</p></div>
                 <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
@@ -68,15 +68,51 @@
         <!--               -->
 
         <div id="page2login" data-role="page">
-            <div data-role="header" class="ui-grid-b pageheader">
-                <div class="ui-block-a"></div>
-                <div class="ui-block-b"><p>Аутентификация</p></div>
+
+            <div data-role="header" data-position="fixed"  class="ui-grid-b pageheader">
+                <div class="ui-block-a">
+                    <a href="#page1index" class="ui-btn ui-icon-back ui-btn-icon-left">Назад</a>
+                </div>
+                <div class="ui-block-b"><p>Вход в систему</p></div>
                 <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
             </div>
-            <div data-role="main">
-                
+
+            <div data-role="main" style="text-align: center;">
+                <div class="ui-grid-a ui-responsive">
+                    <!-- User icon -->
+                    <div class="ui-block-a">
+                        <img src="img/user.png" style="margin: 10px auto;">
+                    </div> 
+                    <!-- Login form -->
+                    <div class="ui-block-b">     
+                        <form action="index.html#page4loading">
+                        <fieldset class="ui-grid-solo" style="padding: 30px 20px;">
+                            <div class="ui-block-a">
+                                <label for="email">Логин (email):</label>
+                                <input type="email" name="email" id="email" value="" placeholder="example@domain.ru" required>
+                            </div>
+                            <div class="ui-block-a">
+                                <label for="password">Пароль:</label>
+                                <input type="password" name="password" id="password" value="" placeholder="******" required>
+                            </div>
+                            <div class="ui-block-a">
+                                <label for="remember">Входить автоматически</label>
+                                <select name="remember" id="remember" data-role="slider">
+                                    <option value="no">Нет</option>
+                                    <option value="yes">Да</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="ui-block-a">
+                                <!-- <input type="submit" name="enter" value="Войти"> -->
+                                <a href="#page4loading" class="ui-btn ui-icon-arrow-r ui-btn-icon-top">Войти</a>
+                            </div>
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
             </div>
-            
+
         </div>
 
         <!--               -->
@@ -84,7 +120,7 @@
         <!--               -->
 
         <div id="page3register" data-role="page">
-            <div data-role="header" class="ui-grid-b pageheader">
+            <div data-role="header" data-position="fixed"  class="ui-grid-b pageheader">
                 <div class="ui-block-a">
                     <a href="#page1index" class="ui-btn ui-icon-back ui-btn-icon-left">Назад</a>
                 </div>
@@ -102,10 +138,30 @@
                 <div class="ui-body">
                     <p>Регистрация производится на сайте kidgrid.ru, в соответствующем разделе.</p>
                     <p>Для регистрации понадобится ввести свой адрес электронной почты и задать пароль, о чем подскажет система в процессе.</p>
+                    <p><a href="http://kidgrid.ru">www.KidGrid.ru</a></p>
                 </div>
             </div>
             
         </div>
+
+        <!--                       -->
+        <!-- WAIT FOR LOADING page -->
+        <!--                       -->
+
+        <div id="page4loading" data-role="page">
+            <div data-role="header" data-position="fixed"  class="ui-grid-b pageheader">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b"><p>Соединение</p></div>
+                <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
+            </div>
+            <div data-role="main">
+                <h3 class="ui-bar ui-bar-b" style="text-align: center;">Загрузка ...</h3>
+                <div style="padding: 30px; text-align: center;">
+                    <img src="css/images/ajax-loader.gif">
+                </div>
+            </div>
+        </div>
+
 
 
      </div>
