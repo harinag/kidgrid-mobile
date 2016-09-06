@@ -33,6 +33,13 @@ body {
     padding:0px;
 }
 
+#page1index {
+    background-image: url('../img/intro_girl.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    
+}
+
 .hidden {
     display: none;
 }
@@ -44,21 +51,17 @@ body {
     text-align: right;
 }
 
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo-lmp-01.png) no-repeat center top; /* 170px x 200px */
-    position: absolute;
-    padding-top: 200px;
-    height:100%;                   /* text area height */
-    width:100%;                   /* text area width */
-    text-align:center;
-}
-
 /* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+@media screen and (min-aspect-ratio: 1/1) {
     .app {
         background-position:left center;
         padding-top: 10px;
+    }
+    .hide-landscape {
+        display: none;
+    }
+    .show-landscape {
+        display: block !important;
     }
 }
 

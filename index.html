@@ -38,17 +38,26 @@
         <!--            -->
 
         <div id="page1index" data-role="page">
-            <div data-role="header" data-position="fixed" class="ui-grid-b pageheader">
+            <div data-role="header" class="ui-grid-b pageheader">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b"><p>Проект KidGrid</p></div>
                 <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
             </div>
-            <div data-role="main" style="text-align: center;">
+            <div data-role="main" style="text-align: center; margin-top: 40px;">
                 <div class="ui-grid-a ui-responsive">
-                    <div class="ui-block-a"><img src="img/logo-lmp-01.png"></div>
+                    <div class="ui-block-a">
+                        <div style="color: white; font-size: 4em; opacity: 0.8;">KidGrid</div>
+                        <img src="img/logo-lmp-01.png">
+                    </div>
                     <div class="ui-grid-solo ui-block-b">
-                        <div class="ui-block-a"><a href="#" class="ui-btn">Онлайн режим</a></div>
-                        <div class="ui-block-a"><a href="#" class="ui-btn">Оффлайн режим</a></div>
+                        <div class="ui-block-a">
+                            <a  href="#page5waitinternet" style="margin: 10px 30px; opacity: 0.8;" class="ui-btn"
+                                onclick="app.startVisibilityTimer(3000, 'page5waitinternet');">Онлайн режим</a>
+                        </div>
+                        <div class="ui-block-a">
+                            <a  href="#page6scannetwork" style="margin: 10px 30px; opacity: 0.8;" class="ui-btn"
+                                onclick="app.startVisibilityTimer(6000, 'page6scannetwork');">Оффлайн режим</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,39 +87,29 @@
             </div>
 
             <div data-role="main" style="text-align: center;">
-                <div class="ui-grid-a ui-responsive">
-                    <!-- User icon -->
-                    <div class="ui-block-a">
-                        <img src="img/user.png" style="margin: 10px auto;">
-                    </div> 
-                    <!-- Login form -->
-                    <div class="ui-block-b">     
-                        <form action="index.html#page4loading">
-                        <fieldset class="ui-grid-solo" style="padding: 30px 20px;">
-                            <div class="ui-block-a">
-                                <label for="email">Логин (email):</label>
-                                <input type="email" name="email" id="email" value="" placeholder="example@domain.ru" required>
-                            </div>
-                            <div class="ui-block-a">
-                                <label for="password">Пароль:</label>
-                                <input type="password" name="password" id="password" value="" placeholder="******" required>
-                            </div>
-                            <div class="ui-block-a">
-                                <label for="remember">Входить автоматически</label>
-                                <select name="remember" id="remember" data-role="slider">
-                                    <option value="no">Нет</option>
-                                    <option value="yes">Да</option>
-                                </select>
-                            </div>
-                            <br>
-                            <div class="ui-block-a">
-                                <!-- <input type="submit" name="enter" value="Войти"> -->
-                                <a href="#page4loading" class="ui-btn ui-icon-arrow-r ui-btn-icon-top">Войти</a>
-                            </div>
-                        </fieldset>
-                        </form>
+                <!-- User icon -->
+                <div class="hide-landscape" style="margin: 20px auto;">
+                    <img src="img/user.png" style="width: 80px;">
+                </div> 
+                <!-- Login form -->
+                <fieldset class="ui-grid-a ui-responsive">
+                    <div class="ui-block-a" style="padding: 5px 20px;">
+                        <label for="email">Логин (email):</label>
+                        <input type="email" name="email" id="email" value="" placeholder="example@domain.ru" required>
+                        <label for="password">Пароль:</label>
+                        <input type="password" name="password" id="password" value="" placeholder="******" required>
+                        <label for="remember">Входить автоматически</label>
+                        <select name="remember" id="remember" data-role="slider">
+                            <option value="no">Нет</option>
+                            <option value="yes">Да</option>
+                        </select>
                     </div>
-                </div>
+                    <div class="ui-block-b" style="padding: 5px 20px;">
+                        <div style="margin-bottom: 70px; display: none;" class="show-landscape"></div>
+                        <button class="ui-btn ui-icon-arrow-r ui-btn-icon-top" onclick="javascript: location.href='#page4loading'">Войти</button>
+                        <!-- <a href="#page4loading" class="ui-btn ui-icon-arrow-r ui-btn-icon-top">Войти</a> -->
+                    </div>
+                </fieldset>
             </div>
 
         </div>
@@ -157,12 +156,70 @@
             <div data-role="main">
                 <h3 class="ui-bar ui-bar-b" style="text-align: center;">Загрузка ...</h3>
                 <div style="padding: 30px; text-align: center;">
-                    <img src="css/images/ajax-loader.gif">
+                    <img src="img/ajax-loader.gif" style="width: 60px;">
                 </div>
             </div>
         </div>
 
 
+        <!--                       -->
+        <!-- WAIT FOR INTERNET CONNECTION -->
+        <!--                       -->
+
+        <div id="page5waitinternet" data-role="page">
+            <div data-role="header" data-position="fixed"  class="ui-grid-b pageheader">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b"><p>Соединение</p></div>
+                <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
+            </div>
+            <div data-role="main">
+                <div class="chvis1">
+                    <h3 class="ui-bar ui-bar-b" style="text-align: center;">Загрузка ...</h3>
+                    <div style="padding: 30px; text-align: center;">
+                        <img src="img/ajax-loader.gif" style="width: 60px;">
+                    </div>
+                </div>
+                <div class="chvis2">
+                    <h3 class="ui-bar ui-bar-a">Нет связи с Интернетом</h3>
+                    <div class="ui-body">
+                        <p>Не удалось установить соединение с облачным сервером</p>
+                        <p>Убедитесь что мобильное устройство соединено с сетью Интернет по сотовой линии или WiFi.</p>
+                        <p>Если соединение активно, то возможно, в настоящее время проводятся технические работы на стороне сервера. Свяжитесь с командой проекта. Контактная информация на сайте <a href="http://kidgrid.ru">KidGrid.ru</a></p>
+                    </div>
+                    <a href="#page1index" style="margin: 10px 30px;" class="ui-btn">Ок</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!--                       -->
+        <!-- SCAN NETWORK          -->
+        <!--                       -->
+
+        <div id="page6scannetwork" data-role="page">
+            <div data-role="header" data-position="fixed"  class="ui-grid-b pageheader">
+                <div class="ui-block-a"></div>
+                <div class="ui-block-b"><p>Поиск устройств</p></div>
+                <div class="ui-block-c"><img src="img/logo-energoproryv.png" style="height: 40px;"></div>
+            </div>
+            <div data-role="main">
+                <div class="chvis1">
+                    <h3 class="ui-bar ui-bar-b" style="text-align: center;">Поиск устройств...</h3>
+                    <div style="padding: 30px; text-align: center;">
+                        <img src="img/ajax-loader.gif" style="width: 60px;">
+                    </div>
+                </div>
+                <div class="chvis2">
+                    <h3 class="ui-bar ui-bar-a">Не найдены устройства</h3>
+                    <div class="ui-body">
+                        <p>В домашней сети не найдены устройства KidGrid.</p>
+                        <p>Убедитесь что мобильное устройство соединено с домашней сетью по WiFi.</p>
+                        <p>Если соединение активно, вероятно что-то не так с наблюдательным устройством, и оно не отвечает на запросы. Попробуйте перезагрузить его и смартфон. Если это не поможет, напишите запрос команде проекта. Контактная информация на сайте <a href="http://kidgrid.ru" target="_blank">KidGrid.ru</a></p>
+                    </div>
+                    <a href="#page1index" style="margin: 10px 30px;" class="ui-btn">Ок</a>
+                </div>
+            </div>
+        </div>
 
      </div>
 

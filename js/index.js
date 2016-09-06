@@ -35,5 +35,17 @@ var app = {
     onDeviceReady: function() {
         $("#loading").addClass("hidden");
         $("#app").removeClass("hidden");
+    },
+    startVisibilityTimer: function(ms, container) {
+        console.log('startVisibilityTimer runned');
+        $('#'+container).find(".chvis2").css("display", "none");
+        $('#'+container).find(".chvis1").css("display", "block");
+        setTimeout(this.changeVisibility, ms, container);
+    },
+    changeVisibility: function (container) {
+        console.log('changeVisibility runned' + container);
+        $('#'+container).find(".chvis1").css("display", "none");
+        $('#'+container).find(".chvis2").css("display", "block");
     }
 };
+
