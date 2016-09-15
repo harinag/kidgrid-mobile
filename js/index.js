@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        this.snd1 = new Media("../media/open-your-app.mp3", function() { console.log('Play sound success'); } );
     },
     // Bind Event Listeners
     //
@@ -46,6 +47,9 @@ var app = {
         console.log('changeVisibility runned' + container);
         $('#'+container).find(".chvis1").css("display", "none");
         $('#'+container).find(".chvis2").css("display", "block");
-    }
+    },
+    // Media
+    snd1: 1
+
 };
 
